@@ -1,0 +1,3443 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #9b2226;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e63946;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #9b2226;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: #9b2226;
+    padding: 8px 16px;
+    border: 2px solid #9b2226;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #9b2226;
+    color: white;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo img {
+    max-height: 60px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: #333;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #9b2226;
+}
+
+.nav-menu a.active::after, .nav-menu a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #9b2226;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #9b2226;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.feature-card h3 {
+    color: #9b2226;
+    padding: 15px 20px 0;
+}
+
+.feature-card p {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.feature-card .btn-secondary {
+    margin: 0 20px 20px;
+}
+
+/* Blog Preview Section */
+.recent-blog {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.recent-blog h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #9b2226;
+}
+
+.blog-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.blog-card {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    padding: 15px 20px 0;
+    color: #333;
+}
+
+.blog-card .date {
+    font-size: 0.9rem;
+    color: #777;
+    padding: 5px 20px;
+}
+
+.blog-card p:not(.date) {
+    padding: 10px 20px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 0 20px 20px;
+    font-weight: bold;
+}
+
+.recent-blog .btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-info, .footer-contact, .footer-links {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.footer-content h3 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-contact a {
+    color: #ddd;
+}
+
+.footer-links a:hover, .footer-contact a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .nav-menu {
+        gap: 15px;
+    }
+    
+    .feature-cards, .blog-preview {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        background-color: white;
+        width: 100%;
+        height: calc(100vh - 90px);
+        padding: 20px;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+		overflow: scroll;
+    }
+
+    .nav-menu.show {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .feature-card, .blog-card {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Extra small screens */
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+
+    .nav-menu {
+        top: 130px;
+        height: calc(100vh - 130px);
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .footer-info, .footer-contact, .footer-links {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+}
+
+/* About Hero Section */
+.about-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.about-hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* About Content Styles */
+.about-content {
+    padding: 60px 0;
+}
+
+.about-section {
+    margin-bottom: 60px;
+}
+
+.about-section h2 {
+    color: #9b2226;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-section h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #9b2226;
+    bottom: 0;
+    left: 0;
+}
+
+.about-section h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 25px 0 15px;
+}
+
+.about-section p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Personal Story Section */
+.personal-story {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.story-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.story-image {
+    flex: 0 0 300px;
+}
+
+.story-image img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.story-text {
+    flex: 1;
+}
+
+/* Initiatives List */
+.initiatives-list {
+    margin: 30px 0;
+}
+
+.initiatives-list li {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.initiative-icon {
+    flex: 0 0 100px;
+    margin-right: 20px;
+}
+
+.initiative-icon img {
+    width: auto;
+    height: 60px;
+}
+
+.initiative-content {
+    flex: 1;
+}
+
+.initiative-content h4 {
+    color: #9b2226;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Mission Grid */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.mission-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-card h3 {
+    color: #9b2226;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 992px) {
+    .about-hero {
+        height: 50vh;
+        padding: 100px 0;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .mission-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        height: 40vh;
+    }
+    
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .story-content {
+        flex-direction: column;
+    }
+    
+    .story-image {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .team-members {
+        gap: 30px;
+    }
+    
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero {
+        height: 35vh;
+        padding: 60px 0;
+    }
+    
+    .about-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .about-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .about-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .about-section {
+        margin-bottom: 40px;
+    }
+    
+    .personal-story {
+        padding: 25px;
+    }
+    
+    .initiatives-list li {
+        flex-direction: column;
+    }
+    
+    .initiative-icon {
+        margin-bottom: 15px;
+    }
+}
+
+/* Understanding Sickle Cell Page Styles */
+.understand-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.understand-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.understand-hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.understand-content {
+    padding: 60px 0;
+}
+
+/* Three-column layout */
+.understand-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.left-sidebar,
+.right-sidebar {
+    flex: 0 0 250px;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0; /* Fixes flexbox overflow issue */
+}
+
+/* Sidebar styling */
+.sidebar-images {
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar-figure {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sidebar-figure img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-figure img:hover {
+    transform: scale(1.03);
+}
+
+.sidebar-figure figcaption {
+    background-color: #f8f9fa;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Content section styling */
+.content-section {
+    margin-bottom: 50px;
+}
+
+.content-section h2 {
+    color: #9b2226;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #9b2226;
+}
+
+.content-section h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin: 25px 0 15px;
+}
+
+.info-box {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 25px 0;
+    border-left: 4px solid #9b2226;
+}
+
+.info-box h3 {
+    margin-top: 0;
+}
+
+.info-box ul {
+    margin-bottom: 0;
+}
+
+/* Table styling */
+.genetics-table-container,
+.treatment-table-container {
+    overflow-x: auto;
+    margin: 25px 0;
+}
+
+.genetics-table,
+.treatment-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.genetics-table th,
+.genetics-table td,
+.treatment-table th,
+.treatment-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.genetics-table th,
+.treatment-table th {
+    background-color: #9b2226;
+    color: white;
+}
+
+.genetics-table tr:nth-child(even),
+.treatment-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table-note {
+    font-style: italic;
+    color: #666;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* Symptoms grid */
+.symptoms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.symptom-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.symptom-card:hover {
+    transform: translateY(-5px);
+}
+
+.symptom-card h3 {
+    color: #9b2226;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.symptom-card p {
+    margin: 0;
+}
+
+/* Complications styling */
+.complications-container {
+    margin: 25px 0;
+}
+
+.complication-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #9b2226;
+}
+
+.complication-item h3 {
+    margin-top: 0;
+    color: #9b2226;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.complication-item p {
+    margin: 0;
+}
+
+/* Diagnosis and treatment styling */
+.diagnosis-section,
+.treatment-section {
+    margin-bottom: 30px;
+}
+
+.diagnosis-section ul,
+.treatment-section ul {
+    padding-left: 20px;
+}
+
+.diagnosis-section li,
+.treatment-section li {
+    margin-bottom: 10px;
+}
+
+/* Living with SCD section */
+.living-with-scd {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.management-tips {
+    flex: 1;
+    min-width: 300px;
+}
+
+.management-tips ul {
+    padding-left: 20px;
+}
+
+.management-tips li {
+    margin-bottom: 10px;
+}
+
+.cta-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.cta-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cta-link {
+    display: inline-block;
+    background-color: #9b2226;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    flex: 1 1 calc(50% - 15px);
+}
+
+.cta-link:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+/* Modal styling for image zoom */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .understand-layout {
+        flex-direction: column;
+    }
+    
+    .left-sidebar, 
+    .right-sidebar {
+        flex: 0 0 auto;
+    }
+    
+    .sidebar-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        position: static;
+    }
+    
+    .sidebar-figure {
+        flex: 1 1 200px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .understand-hero {
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .understand-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .symptoms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .understand-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .understand-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.7rem;
+    }
+    
+    .content-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .symptoms-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .understand-hero {
+        padding: 60px 0;
+    }
+    
+    .understand-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .understand-content {
+        padding: 40px 0;
+    }
+    
+    .sidebar-figure {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    
+    .cta-link {
+        flex: 0 0 100%;
+    }
+}
+
+/* Family & Caregiver Support Page Styles */
+.family-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.family-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.family-hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.family-content {
+    padding: 60px 0;
+}
+
+.family-intro {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.family-section {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.family-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.family-section h2 {
+    color: #9b2226;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Care Grid Section */
+.care-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.care-card {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.care-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.care-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.care-card h3 {
+    color: #9b2226;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.care-list {
+    list-style: none;
+    padding: 0;
+}
+
+.care-list li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.care-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.care-list li strong {
+    color: #9b2226;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Image Feature */
+.image-feature {
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.image-feature img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.image-caption {
+    font-style: italic;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Self-Care Section */
+.self-care-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.self-care-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.self-care-assessment {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.self-care-assessment h3 {
+    color: #9b2226;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.assessment-table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.assessment-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.assessment-table th,
+.assessment-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.assessment-table th {
+    background-color: #9b2226;
+    color: white;
+}
+
+.assessment-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.assessment-note {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Resources Section */
+.resources-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.resource-col {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.resource-col h3 {
+    color: #9b2226;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* FAQ Section */
+.faq-container {
+    margin: 30px 0;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-item h3 {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+    position: relative;
+    border-left: 4px solid #9b2226;
+}
+
+.faq-answer {
+    padding: 20px;
+    background-color: white;
+}
+
+.faq-answer p {
+    margin-top: 0;
+}
+
+.faq-answer ul {
+    padding-left: 20px;
+}
+
+.faq-answer ul li {
+    margin-bottom: 8px;
+}
+
+/* CTA Section */
+.family-cta {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.family-cta h2 {
+    color: #9b2226;
+    margin-bottom: 20px;
+}
+
+.family-cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #9b2226;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: #9b2226;
+    padding: 9px 19px;
+    border: 2px solid #9b2226;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #9b2226;
+    color: white;
+}
+
+/* Responsive Design for Family & Caregiver Support Page */
+@media (max-width: 992px) {
+    .family-hero {
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .family-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .self-care-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .family-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .family-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .family-intro {
+        font-size: 1.1rem;
+    }
+    
+    .family-section h2 {
+        font-size: 1.7rem;
+    }
+    
+    .care-card h3,
+    .resource-col h3,
+    .self-care-assessment h3 {
+        font-size: 1.3rem;
+    }
+    
+    .resources-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .family-hero {
+        padding: 60px 0;
+    }
+    
+    .family-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .family-content {
+        padding: 40px 0;
+    }
+    
+    .family-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .care-card {
+        padding: 20px;
+    }
+    
+    .self-care-assessment {
+        padding: 20px;
+    }
+    
+    .family-cta {
+        padding: 25px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn, .btn-secondary {
+        width: 100%;
+    }
+}
+
+/* Healthy Living Page Styles */
+.healthy-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.healthy-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.healthy-hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.healthy-content {
+    padding: 60px 0;
+}
+
+.healthy-intro {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.healthy-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.healthy-section:last-of-type {
+    border-bottom: none;
+}
+
+.section-icon {
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.section-icon .icon {
+    width: 80px;
+    height: 80px;
+}
+
+.section-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.section-content h2 {
+    color: #9b2226;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.section-content h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin: 25px 0 15px;
+}
+
+/* Nutrition Section */
+.nutrition-guidelines {
+    margin: 30px 0;
+}
+
+.responsive-table-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.nutrition-table th, 
+.nutrition-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.nutrition-table th {
+    background-color: #9b2226;
+    color: white;
+}
+
+.nutrition-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.nutrition-tips {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.healthy-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.healthy-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+    margin-bottom: 5px;
+}
+
+.healthy-list li:last-child {
+    border-bottom: none;
+}
+
+.healthy-list li strong {
+    color: #9b2226;
+}
+
+.tip-note {
+    font-style: italic;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Exercise Section */
+.exercise-container {
+    margin: 30px 0;
+}
+
+.activity-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.activity-card {
+    flex: 1 1 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.activity-card h4 {
+    color: #9b2226;
+    padding: 15px 15px 5px;
+    margin: 0;
+}
+
+.activity-card p {
+    padding: 0 15px 15px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.exercise-guidelines {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Mental Health Section */
+.mental-wellness {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.wellness-strategies,
+.wellness-resources {
+    flex: 1;
+    min-width: 300px;
+}
+
+.resource-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.resource-button {
+    display: inline-block;
+    background-color: #f8f9fa;
+    color: #9b2226;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1 1 calc(50% - 15px);
+}
+
+.resource-button:hover {
+    background-color: #9b2226;
+    color: white;
+    border-color: #9b2226;
+}
+
+/* Pain Management Section */
+.pain-management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.management-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.management-card:hover {
+    transform: translateY(-5px);
+}
+
+.management-card h3 {
+    color: #9b2226;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.management-card p {
+    margin: 0;
+}
+
+/* Footer Section */
+.healthy-footer {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.healthy-footer p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.healthy-footer strong {
+    color: #9b2226;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #9b2226;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+/* Responsive Design for Healthy Living Page */
+@media (max-width: 992px) {
+    .healthy-hero {
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .healthy-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .healthy-section {
+        flex-direction: column;
+    }
+    
+    .section-icon {
+        margin-bottom: 15px;
+    }
+    
+    .mental-wellness {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .healthy-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .healthy-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .healthy-intro {
+        font-size: 1.1rem;
+    }
+    
+    .section-content h2 {
+        font-size: 1.7rem;
+    }
+    
+    .activity-cards {
+        justify-content: center;
+    }
+    
+    .activity-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+    
+    .pain-management-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .healthy-hero {
+        padding: 60px 0;
+    }
+    
+    .healthy-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .healthy-content {
+        padding: 40px 0;
+    }
+    
+    .section-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .activity-card {
+        flex: 0 0 100%;
+    }
+    
+    .pain-management-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resource-button {
+        flex: 0 0 100%;
+    }
+    
+    .healthy-footer p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Contact Page Styles */
+.contact-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.contact-hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form-section {
+    flex: 2;
+    min-width: 400px;
+}
+
+.contact-methods {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-method {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.contact-method h3 {
+    color: #9b2226;
+    margin-bottom: 10px;
+}
+
+.contact-method .detail {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+.external-resources {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #9b2226;
+}
+
+.contact-form {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label, 
+.form-question label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea,
+.form-question textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #9b2226;
+}
+
+.form-question {
+    margin-bottom: 15px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.form-checkbox input {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* Glossary Page Styles */
+.glossary-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glossary-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.glossary-hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.glossary-content {
+    padding: 60px 0;
+}
+
+.glossary-intro {
+    margin-bottom: 40px;
+}
+
+.glossary-navigation {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.glossary-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.glossary-links li a {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #9b2226;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.glossary-links li a:hover {
+    background-color: #e63946;
+}
+
+.glossary-section {
+    margin-bottom: 50px;
+    scroll-margin-top: 100px; /* For smooth scrolling to sections */
+}
+
+.glossary-section h3 {
+    color: #9b2226;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #9b2226;
+}
+
+.glossary-terms dt {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.glossary-terms dd {
+    margin-left: 0;
+    margin-top: 5px;
+    line-height: 1.6;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.glossary-references {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.resources-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.resources-table th,
+.resources-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.resources-table th {
+    background-color: #9b2226;
+    color: white;
+}
+
+.resources-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.resources-table tr:hover {
+    background-color: #e6e6e6;
+}
+
+/* Responsive design for glossary and contact pages */
+@media (max-width: 992px) {
+    .contact-hero,
+    .glossary-hero {
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .contact-hero h1,
+    .glossary-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .resources-table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero h1,
+    .glossary-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .contact-hero p,
+    .glossary-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .glossary-terms dt {
+        font-size: 1.1rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-actions button {
+        width: 100%;
+    }
+    
+    .resources-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-hero,
+    .glossary-hero {
+        padding: 60px 0;
+    }
+    
+    .contact-hero h1,
+    .glossary-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .glossary-navigation {
+        padding: 15px;
+    }
+    
+    .glossary-links li a {
+        padding: 4px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .glossary-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-form {
+        padding: 20px 15px;
+    }
+    
+    fieldset {
+        padding: 15px 10px;
+    }
+}
+
+/* Resources & Support Groups Page Styles */
+.resources-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resources-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.resources-hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.resources-content {
+    padding: 60px 0;
+}
+
+.resources-intro {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.resource-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.resource-section:last-of-type {
+    border-bottom: none;
+}
+
+.resource-icon {
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.resource-icon .icon {
+    width: 80px;
+    height: 80px;
+}
+
+.resource-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.resource-content h2 {
+    color: #9b2226;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.resource-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.resource-card {
+    flex: 1 1 250px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    color: #9b2226;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.resource-card p {
+    margin-bottom: 20px;
+}
+
+.resource-link {
+    display: inline-block;
+    color: #9b2226;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.resource-link:hover {
+    border-bottom-color: #9b2226;
+}
+
+.resource-note {
+    font-style: italic;
+    color: #666;
+    margin-top: 30px;
+}
+
+/* Support Groups Table */
+.support-groups-container {
+    margin: 30px 0;
+}
+
+.support-groups-container h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.responsive-table-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.support-groups-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.support-groups-table th, 
+.support-groups-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.support-groups-table th {
+    background-color: #9b2226;
+    color: white;
+    font-weight: bold;
+}
+
+.support-groups-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.support-groups-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.support-groups-table a {
+    color: #9b2226;
+}
+
+.support-groups-table a:hover {
+    text-decoration: underline;
+}
+
+/* Community Programs */
+.community-programs {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.program-list {
+    list-style: none;
+    padding: 0;
+}
+
+.program-list li {
+    padding: 15px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.program-list li:last-child {
+    border-bottom: none;
+}
+
+.program-list strong {
+    color: #9b2226;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Educational Resources */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.education-item {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+}
+
+.education-item h3 {
+    color: #9b2226;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.education-item p {
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: #9b2226;
+    padding: 8px 16px;
+    border: 2px solid #9b2226;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #9b2226;
+    color: white;
+}
+
+/* Links & Hotlines */
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.external-links, 
+.hotlines-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.link-list,
+.hotline-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li,
+.hotline-list li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.link-list li:last-child,
+.hotline-list li:last-child {
+    border-bottom: none;
+}
+
+.link-list strong,
+.hotline-list strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.link-list a {
+    word-break: break-all;
+}
+
+.link-list a:hover {
+    color: #e63946;
+}
+
+/* Resources Footer */
+.resources-footer {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.resources-footer p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.resources-footer strong {
+    color: #9b2226;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #9b2226;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+/* Responsive Design for Resources Page */
+@media (max-width: 992px) {
+    .resources-hero {
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .resources-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .resource-section {
+        flex-direction: column;
+    }
+    
+    .resource-icon {
+        margin-bottom: 15px;
+    }
+    
+    .links-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .resources-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .resources-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .resources-intro {
+        font-size: 1.1rem;
+    }
+    
+    .resource-content h2 {
+        font-size: 1.7rem;
+    }
+    
+    .support-groups-container h3,
+    .community-programs h3 {
+        font-size: 1.3rem;
+    }
+    
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .resources-hero {
+        padding: 60px 0;
+    }
+    
+    .resources-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .resources-content {
+        padding: 40px 0;
+    }
+    
+    .resource-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .resource-card {
+        flex: 0 0 100%;
+    }
+    
+    .resources-footer p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Blog Page Styles */
+.blog-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.blog-hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.blog-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 800px;
+}
+
+.blog-sidebar {
+    flex: 0 0 300px;
+}
+
+/* Featured Video Section */
+.featured-video {
+    margin-bottom: 50px;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.featured-video h2 {
+    color: #9b2226;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.video-description {
+    font-style: italic;
+    color: #666;
+    text-align: center;
+}
+
+/* Blog Posts Section */
+.section-title {
+    color: #9b2226;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #9b2226;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-post {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.post-image {
+    flex: 0 0 300px;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.post-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.post-date, .post-category {
+    display: inline-block;
+}
+
+.post-category {
+    background-color: #f8f9fa;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #9b2226;
+}
+
+.post-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    color: #9b2226;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #e63946;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+.pagination a, .pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pagination .current-page {
+    background-color: #9b2226;
+    color: white;
+    font-weight: bold;
+}
+
+.pagination .page-link {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.pagination .page-link:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+.pagination .next-page {
+    width: auto;
+    padding: 0 15px;
+    border-radius: 20px;
+    background-color: #f8f9fa;
+}
+
+.pagination .next-page:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+/* Sidebar Widgets */
+.sidebar-widget {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.sidebar-widget h3 {
+    color: #9b2226;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #9b2226;
+}
+
+/* Subscribe Widget */
+.subscribe-widget p {
+    margin-bottom: 15px;
+}
+
+.subscribe-form .form-group {
+    margin-bottom: 15px;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Categories Widget */
+.category-list {
+    list-style: none;
+    padding: 0;
+}
+
+.category-list li {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+.category-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.category-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.category-list a:hover {
+    color: #9b2226;
+}
+
+.category-list span {
+    background-color: #eee;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    color: #666;
+}
+
+/* Recent Posts Widget */
+.recent-posts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-posts-list li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.recent-posts-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.recent-posts-list a {
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.recent-posts-list a:hover {
+    color: #9b2226;
+}
+
+.recent-posts-list .post-date {
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Resources Widget */
+.resources-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-list li {
+    margin-bottom: 10px;
+}
+
+.resources-list a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #333;
+    transition: all 0.3s ease;
+    border-left: 3px solid #9b2226;
+}
+
+.resources-list a:hover {
+    background-color: #9b2226;
+    color: white;
+}
+
+/* Responsive Design for Blog Page */
+@media (max-width: 992px) {
+    .blog-hero {
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .blog-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .blog-container {
+        flex-direction: column;
+    }
+    
+    .blog-sidebar {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .blog-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .post-image {
+        flex: 0 0 100%;
+        height: 200px;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-hero {
+        padding: 60px 0;
+    }
+    
+    .blog-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .featured-video {
+        padding: 20px 15px;
+    }
+    
+    .featured-video h2 {
+        font-size: 1.4rem;
+    }
+    
+    .post-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .sidebar-widget {
+        padding: 20px 15px;
+    }
+}
+
+/* Gene Therapy Page Styles */
+.therapy-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bloodcells.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.therapy-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.therapy-hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.therapy-content {
+    padding: 60px 0;
+}
+
+.therapy-intro {
+    max-width: 850px;
+    margin: 0 auto 40px;
+}
+
+.therapy-intro h2 {
+    color: #9b2226;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.source {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.therapy-highlight {
+    background-color: #f8f9fa;
+    border-left: 4px solid #9b2226;
+    padding: 20px;
+    margin: 30px 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.therapy-section {
+    margin-bottom: 50px;
+}
+
+.therapy-section h3 {
+    color: #9b2226;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #9b2226;
+}
+
+.therapy-info {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.therapy-image {
+    flex: 0 0 350px;
+}
+
+.therapy-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.therapy-text {
+    flex: 1;
+}
+
+.therapy-text p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.process-steps {
+    counter-reset: step-counter;
+    list-style-type: none;
+    padding: 0;
+}
+
+.process-steps li {
+    position: relative;
+    padding-left: 70px;
+    margin-bottom: 30px;
+    min-height: 50px;
+}
+
+.process-steps li::before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #9b2226;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.process-steps h4 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.process-steps ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.therapy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.therapy-card {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.therapy-card h3 {
+    color: #9b2226;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #9b2226;
+}
+
+.checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checklist li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.checklist li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #9b2226;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.risk-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.risk-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.risk-list li::before {
+    content: "!";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #e63946;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.cost-table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cost-table th, 
+.cost-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.cost-table th {
+    background-color: #9b2226;
+    color: white;
+}
+
+.cost-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cost-table ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.cost-note {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+.faq-item h4 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-left: 4px solid #9b2226;
+}
+
+.question-box {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.question-list {
+    columns: 2;
+    column-gap: 30px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.question-list li {
+    margin-bottom: 15px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.resource-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.resource-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #9b2226;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+    background-color: #9b2226;
+    color: white;
+    border-color: #9b2226;
+}
+
+.therapy-footer {
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.last-updated {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Responsive Styles for Gene Therapy Page */
+@media (max-width: 992px) {
+    .therapy-hero {
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .therapy-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .therapy-info {
+        flex-direction: column;
+    }
+    
+    .therapy-image {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    
+    .therapy-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .therapy-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .therapy-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .therapy-intro h2 {
+        font-size: 1.7rem;
+    }
+    
+    .therapy-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .process-steps li {
+        padding-left: 60px;
+    }
+    
+    .question-list {
+        columns: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .therapy-hero {
+        padding: 60px 0;
+    }
+    
+    .therapy-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .process-steps li {
+        padding-left: 50px;
+    }
+    
+    .process-steps li::before {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .therapy-card {
+        padding: 15px;
+    }
+    
+    .therapy-content {
+        padding: 40px 0;
+    }
+    
+    .resource-link {
+        width: 100%;
+        text-align: center;
+    }
+}
